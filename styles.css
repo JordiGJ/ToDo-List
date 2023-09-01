@@ -1,0 +1,70 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  padding: 1rem;
+  background-color: #222;
+}
+#userInput {
+  padding: 1rem;
+  width: 360px;
+  font-size: 1.2rem;
+  border: none;
+  background-color: aliceblue;
+  border-radius: 5px;
+  box-shadow: 2px 3px 8px #bebebe;
+  transition: background-color 0.2s linear;
+  height: 48.8px;
+}
+#userInput:focus {
+  background-color: rgba(192, 222, 248, 0.8);
+  outline: none;
+}
+
+.note {
+  margin: 0.5rem;
+  padding: 1rem;
+  width: 360px;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(198, 247, 230, 0.8);
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 2px 3px 8px #bebebe;
+  transition: background-color 0.2s linear;
+  height: 48.8px;
+}
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+img {
+  width: 12px;
+  cursor: pointer;
+}
+.done {
+  text-decoration: line-through;
+  filter: grayscale(1);
+}
+
+@media (width <= 410px) {
+  #userInput {
+    width: 260px;
+  }
+  .note {
+    width: 260px;
+  }
+}
